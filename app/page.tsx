@@ -64,8 +64,8 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#E5E7EB]">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <LogoIcon size={38} />
-            <span className="font-bold text-xl text-[#334155] tracking-tight">PottyPass</span>
+            <LogoIcon size={44} />
+            <span className="font-bold text-2xl text-[#334155] tracking-tight">PottyPass</span>
           </div>
           <a
             href="https://instagram.com/pottypassapp"
