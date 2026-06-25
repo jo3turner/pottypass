@@ -8,22 +8,29 @@ export default function WaitlistForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (!email) return;
     setLoading(true);
     setError('');
 
-    const mailchimpUrl = process.env.NEXT_PUBLIC_MAILCHIMP_URL;
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
 
-    if (mailchimpUrl && mailchimpUrl !== '#') {
-      try {
-        // Mailchimp embed forms use a hidden iframe to bypass CORS
-        const url = mailchimpUrl.replace('/post?', '/post-json?') + `&EMAIL=${encodeURIComponent(email)}&c=?`;
-        await fetch(url, { method: 'GET', mode: 'no-cors' });
-      } catch {
-        // no-cors swallows errors; treat as success
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        setError(body.error ?? 'Something went wrong. Please try again.');
+        setLoading(false);
+        return;
       }
+    } catch {
+      setError('Something went wrong. Please try again.');
+      setLoading(false);
+      return;
     }
 
     setLoading(false);
