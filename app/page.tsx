@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import WaitlistForm from '@/components/WaitlistForm';
 
 function LogoIcon({ size = 32 }: { size?: number }) {
   return (
@@ -112,7 +111,14 @@ export default function Home() {
               PottyPass is NYC&apos;s curated network of clean, private restrooms — available on‑demand, exactly when you need it most.
             </p>
 
-            <WaitlistForm />
+            <a
+              href="https://0cc9a36e.sibforms.com/serve/MUIFAM8udK9KTVBHDLq_TuSqDnVk6f4jajuiQje8xFcFOz2FO5iNj3mdJ-Mdm_vrWJS_U--Q0v7fa6Wc_hE8Xlk4aoHcH6K2KbQxU8D_pwz-GD15_hyqdcfBuSUsSNzzPk4kog7ISg7DlgZvjvfsc9iiicR8PQxeCZnf7R3TLo14bAaAYu5ve2nD5C975izGB_oQEGljN96-xsu4Ew=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-[#4CB6F4] text-white text-sm font-semibold rounded-xl hover:bg-[#1F4D7A] transition-colors duration-200"
+            >
+              Join the Waitlist
+            </a>
 
             <p className="text-sm text-[#334155]/35 mt-4">
               No spam. Just a heads-up when we launch.
