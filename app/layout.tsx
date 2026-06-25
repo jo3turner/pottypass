@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'NYC\'s curated network of clean, on-demand restrooms. Coming soon.',
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/branding_images/pin_reg.png',
   },
 };
 
