@@ -2,21 +2,13 @@ import Image from 'next/image';
 
 function LogoIcon({ size = 32 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M20 1C11.163 1 4 8.163 4 17C4 28.5 20 45 20 45C20 45 36 28.5 36 17C36 8.163 28.837 1 20 1Z"
-        fill="#4CB6F4"
-      />
-      <circle cx="15" cy="13" r="3" fill="white" />
-      <circle cx="25" cy="13" r="3" fill="white" />
-      <path
-        d="M11 24C11 19.5 13.5 17 15.5 17C17 17 18 17.5 20 17.5C22 17.5 23 17 24.5 17C26.5 17 29 19.5 29 24"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-        fill="none"
-      />
-    </svg>
+    <Image
+      src="/branding_images/pin_reg.png"
+      alt="PottyPass logo"
+      width={size}
+      height={size}
+      style={{ objectFit: 'contain' }}
+    />
   );
 }
 
@@ -107,7 +99,7 @@ export default function Home() {
             </h1>
 
             {/* Sub */}
-            <p className="text-lg text-[#334155]/60 leading-relaxed mb-10 max-w-[420px]">
+            <p className="text-lg text-[#334155]/60 leading-relaxed mb-6 max-w-[420px]">
               PottyPass is NYC&apos;s curated network of clean, private restrooms — available on‑demand, exactly when you need it most.
             </p>
 
@@ -120,13 +112,13 @@ export default function Home() {
               Join the Waitlist
             </a>
 
-            <p className="text-sm text-[#334155]/35 mt-4">
+            <p className="text-sm text-[#334155]/35 mt-6">
               No spam. Just a heads-up when we launch.
             </p>
           </div>
 
           {/* Right — phone mockup */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative">
               {/* Background glow */}
               <div
