@@ -234,14 +234,22 @@ export default function Home() {
             <LogoIcon size={20} />
             <span className="text-[#334155]/50 text-sm">© 2026 PottyPass</span>
           </div>
-          <a
-            href="https://instagram.com/pottypassapp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#334155]/40 hover:text-[#4CB6F4] text-sm transition-colors"
-          >
-            @pottypassapp
-          </a>
+          <div className="flex items-center gap-6">
+            <a
+              href="/privacy"
+              className="text-[#334155]/40 hover:text-[#4CB6F4] text-sm transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="https://instagram.com/pottypassapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#334155]/40 hover:text-[#4CB6F4] text-sm transition-colors"
+            >
+              @pottypassapp
+            </a>
+          </div>
         </div>
       </footer>
 
